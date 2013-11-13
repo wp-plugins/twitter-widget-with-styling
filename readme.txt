@@ -3,7 +3,7 @@ Contributors: mpol
 Tags: twitter, widget, twitter style, twitter styling, stylesheet
 Requires at least: 3.0
 Tested up to: 3.7.1
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv2 or later
 
 
@@ -46,6 +46,9 @@ You can, but it will probably not load any styling in the second widget.
 6. Screenshot of the frontend of the widget with blue styling
 
 == Changelog ==
+
+= 1.1 =
+* First fix issue of loading on every page
 
 = 1.0 =
 * First Version

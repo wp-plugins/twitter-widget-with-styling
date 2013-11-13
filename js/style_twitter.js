@@ -3,7 +3,11 @@
 		var ifrm_elem = 0;
 		var ifrm_content = 0;
 		var ifrm = 0;
-		var cssUrl = css;
+		if(typeof css == "undefined") {
+			return;
+		} else {
+			var cssUrl = css;
+		}
 
 		var cssLink = jQuery("<link/>", {
 			href: cssUrl,

@@ -3,7 +3,7 @@
 Plugin Name: Twitter Widget with Styling
 Plugin URI: http://timelord.nl/
 Description: A Twitter widget that is easy to configure and easy to style.
-Version: 1.0
+Version: 1.1
 Author: Marcel Pol
 Author URI: http://timelord.nl
 Text Domain: twitter_style
