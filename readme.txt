@@ -52,6 +52,10 @@ You can, but it will probably not load any styling in the second widget.
 
 == Changelog ==
 
+= 1.2 =
+* Add Serbo-Croatian language (thanks Borisa)
+* Add development mode
+
 = 1.1 =
 * First fix issue of loading on every page
 
