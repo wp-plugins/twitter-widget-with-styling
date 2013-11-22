@@ -3,7 +3,7 @@ Contributors: mpol
 Tags: twitter, widget, twitter style, twitter styling, stylesheet
 Requires at least: 3.0
 Tested up to: 3.7.1
-Stable tag: 1.1
+Stable tag: 1.2
 License: GPLv2 or later
 
 
