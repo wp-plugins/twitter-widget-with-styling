@@ -40,7 +40,7 @@ class TL_Twitter extends WP_Widget {
 		add_action( 'deleted_post', array(&$this, 'flush_widget_cache') );
 		add_action( 'switch_theme', array(&$this, 'flush_widget_cache') );
 
-		add_action( 'wp_enqueue_scripts', array( $this, 'register_plugin_styles' ) );
+		add_action( 'wp_enqueue_scripts', array( &$this, 'register_plugin_styles' ) );
 
 		load_plugin_textdomain('twitter_style', false, dirname( plugin_basename( __FILE__ ) ) . '/lang/');
 	}
@@ -67,6 +67,8 @@ class TL_Twitter extends WP_Widget {
 		$id		= $instance['id'];
 		$height	= $instance['height'];
 		$border	= $instance['border'];
+		$devel	= ! empty( $instance['devel'] ) ? '1' : '0';
+
 
 		// find out if the template has a stylesheet, else use the one in the plugin
 		$css = TEMPLATEPATH . '/style_twitter.css';
@@ -75,7 +77,11 @@ class TL_Twitter extends WP_Widget {
 		} else {
 			$css = WP_PLUGIN_URL . '/' . plugin_basename(dirname(__FILE__)) . '/css/style_twitter.css';
 		}
-		$rand = mt_rand(0, 10);
+		if ( $devel ) {
+			$rand = "?ver=" . mt_rand(0, 100);
+		} else {
+			$rand = "";
+		}
 
 		echo $before_widget;
 		if ( $title ) echo $before_title . $title . $after_title; ?>
@@ -91,7 +97,7 @@ class TL_Twitter extends WP_Widget {
 
 		<script>
 			/* Twitter Widget with Styling */
-			var css = '<?php echo $css . "?ver=" . $rand; ?>';
+			var css = '<?php echo $css . $rand; ?>';
 		</script>
 
 		<?php echo $after_widget; ?>
@@ -108,6 +114,7 @@ class TL_Twitter extends WP_Widget {
 		$instance['id']		= strip_tags($new_instance['id']);
 		$instance['height'] = strip_tags($new_instance['height']);
 		$instance['border'] = strip_tags($new_instance['border']);
+		$instance['devel']	= ! empty( $new_instance['devel'] ) ? 1 : 0;
 		$this->flush_widget_cache();
 
 		$alloptions = wp_cache_get( 'alloptions', 'options' );
@@ -125,7 +132,7 @@ class TL_Twitter extends WP_Widget {
     	/*
     	 * Set Default Value for widget form
     	 */
-    	$default_value	=	array("title"=> "Twitter", "name" => "MarcelPolleke", "id" => "399217180551544832", "height" => 400, "border" => "#f4f4f4" );
+    	$default_value	=	array("title"=> "Twitter", "name" => "MarcelPolleke", "id" => "399217180551544832", "height" => 400, "border" => "#f4f4f4", "devel" => 0 );
     	$instance		=	wp_parse_args( (array) $instance, $default_value );
 
 		$title = isset($instance['title']) ? esc_attr($instance['title']) : ''; ?>
@@ -147,6 +154,10 @@ class TL_Twitter extends WP_Widget {
 		$border = isset($instance['border']) ? esc_attr($instance['border']) : ''; ?>
 		<p><label for="<?php echo $this->get_field_id('border'); ?>"><?php _e('Border Color', 'twitter_style'); ?></label>
 		<input class="widefat" id="<?php echo $this->get_field_id('border'); ?>" name="<?php echo $this->get_field_name('border'); ?>" type="text" value="<?php echo $border; ?>" /></p><?php
+
+		$devel = esc_attr( $instance['devel'] ); ?>
+		<input type="checkbox" class="checkbox" id="<?php echo $this->get_field_id('devel'); ?>" name="<?php echo $this->get_field_name('devel'); ?>"<?php checked( $devel ); ?> />
+		<label for="<?php echo $this->get_field_id('devel'); ?>"><?php _e( 'Development','twitter_style' ); ?></label><br /><?php
 	}
 
 	/**

@@ -32,6 +32,11 @@ Copy the style_twitter.css from the plugin to your theme directory.
 The widget will find it and add it to the webpage instead of the default in the plugin.
 Do not edit the style_twitter.css in the plugin itself, it will be overwritten when updating.
 
+= I edit the stylesheet, but I do not see the changes in the browser =
+
+This is because the browser cache does not refresh.
+You can set "Development" on in the widget. It will make sure it refreshes the browser cache.
+
 = Can I add multiple widgets to a page? =
 
 You can, but it will probably not load any styling in the second widget.
