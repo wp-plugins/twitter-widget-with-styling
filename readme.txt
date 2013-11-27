@@ -14,6 +14,11 @@ A Twitter widget that is easy to configure and easy to style.
 A Twitter widget that is easy to configure and easy to style. It uses the Embedded Timeline widget of Twitter.com.
 You can have it load an extra stylesheet, where you can style the layout of the widget.
 
+= Languages =
+
+nl_NL Marcel Pol
+se_RS [Borisa Djuraskovic](http://webhostinghub.com)
+
 == Installation ==
 
 1. Upload the plugin folder to the `/wp-content/plugins/` directory.
