@@ -16,7 +16,7 @@ You can have it load an extra stylesheet, where you can style the layout of the 
 
 = Languages =
 
-* nl_NL Marcel Pol
+* nl_NL [Marcel Pol](http://timelord.nl)
 * se_RS [Borisa Djuraskovic](http://webhostinghub.com)
 
 == Installation ==
