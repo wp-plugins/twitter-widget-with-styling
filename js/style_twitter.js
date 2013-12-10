@@ -3,10 +3,10 @@
 		var ifrm_elem = 0;
 		var ifrm_content = 0;
 		var ifrm = 0;
-		if(typeof css == "undefined") {
+		if(typeof twitter_style_css == "undefined") {
 			return;
 		} else {
-			var cssUrl = css;
+			var cssUrl = twitter_style_css;
 		}
 
 		var cssLink = jQuery("<link/>", {

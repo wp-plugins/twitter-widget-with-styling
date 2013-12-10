@@ -3,7 +3,7 @@ Contributors: mpol
 Tags: twitter, widget, twitter style, twitter styling, stylesheet
 Requires at least: 3.0
 Tested up to: 3.7.1
-Stable tag: 1.2
+Stable tag: 1.2.1
 License: GPLv2 or later
 
 
@@ -16,8 +16,8 @@ You can have it load an extra stylesheet, where you can style the layout of the 
 
 = Languages =
 
-nl_NL Marcel Pol
-se_RS [Borisa Djuraskovic](http://webhostinghub.com)
+* nl_NL Marcel Pol
+* se_RS [Borisa Djuraskovic](http://webhostinghub.com)
 
 == Installation ==
 
@@ -56,6 +56,9 @@ You can, but it will probably not load any styling in the second widget.
 6. Screenshot of the frontend of the widget with blue styling
 
 == Changelog ==
+
+= 1.2.1 =
+* Change name of var to not conflict
 
 = 1.2 =
 * Add Serbo-Croatian language (thanks Borisa)
