@@ -1,6 +1,6 @@
 === Twitter Widget with Styling ===
 Contributors: mpol
-Tags: twitter, widget, twitter style, twitter styling, stylesheet
+Tags: twitter, widget, twitter style, twitter styling, stylesheet, embedded timeline, easy twitter widget
 Requires at least: 3.0
 Tested up to: 3.7.1
 Stable tag: 1.2.1
