@@ -60,9 +60,5 @@
 	}
 
 	jQuery(document).ready(function() {
-		// set the contentType of the twitter iframe document so we relax permissions
-		jQuery.ajaxSetup({
-			contentType: "text/html"
-		});
 		styleTwitterWidget();
 	});
