@@ -57,6 +57,9 @@ You can, but it will probably not load any styling in the second widget.
 
 == Changelog ==
 
+= 1.2.4 =
+* More examples
+
 = 1.2.3 =
 * Examples now included
 
