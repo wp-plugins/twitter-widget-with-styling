@@ -57,6 +57,9 @@ You can, but it will probably not load any styling in the second widget.
 
 == Changelog ==
 
+= 1.2.3 =
+* Examples now included
+
 = 1.2.2 =
 * Fix issue with Contact Form 7
 
