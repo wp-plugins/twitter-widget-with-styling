@@ -3,7 +3,7 @@
 Plugin Name: Twitter Widget with Styling
 Plugin URI: http://timelord.nl/
 Description: A Twitter widget that is easy to configure and easy to style.
-Version: 1.2.4
+Version: 1.2.5
 Author: Marcel Pol
 Author URI: http://timelord.nl
 Text Domain: twitter_style
@@ -39,8 +39,6 @@ class TL_Twitter extends WP_Widget {
 		add_action( 'save_post', array(&$this, 'flush_widget_cache') );
 		add_action( 'deleted_post', array(&$this, 'flush_widget_cache') );
 		add_action( 'switch_theme', array(&$this, 'flush_widget_cache') );
-
-		add_action( 'wp_enqueue_scripts', array( &$this, 'register_plugin_styles' ) );
 
 		load_plugin_textdomain('twitter_style', false, dirname( plugin_basename( __FILE__ ) ) . '/lang/');
 	}
@@ -103,6 +101,10 @@ class TL_Twitter extends WP_Widget {
 		<?php echo $after_widget; ?>
 
 		<?php
+		// Registers Style with WordPress to wp_footer() so the browser-cache is updated
+		wp_register_script( 'tl_twitter', WP_PLUGIN_URL . '/' . plugin_basename(dirname(__FILE__)) . '/js/style_twitter.js','jquery','1.2.5', true );
+		wp_enqueue_script('tl_twitter');
+		
 		$cache[$args['widget_id']] = ob_get_flush();
 		wp_cache_set('tl_twitter', $cache, 'widget');
 	}
@@ -160,19 +162,6 @@ class TL_Twitter extends WP_Widget {
 		<label for="<?php echo $this->get_field_id('devel'); ?>"><?php _e( 'Development','twitter_style' ); ?></label><br /><?php
 	}
 
-	/**
-	 * Register and enqueue scripts.
-	 */
-	public function register_plugin_styles() {
-		// Registers Style with WordPress to wp_footer() so the browser-cache is updated
-		wp_register_script( 'tl_twitter', WP_PLUGIN_URL . '/' . plugin_basename(dirname(__FILE__)) . '/js/style_twitter.js','jquery','', true );
-
-		// Adding the js only if widget in use
-		if ( is_active_widget( false, false, $this->id_base, true ) ) {
-			wp_enqueue_script('jquery');
-			wp_enqueue_script('tl_twitter');
-		}
-	}
 }
 
 

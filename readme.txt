@@ -57,6 +57,9 @@ You can, but it will probably not load any styling in the second widget.
 
 == Changelog ==
 
+= 1.2.5 =
+* Only load js when widget is loaded (in footer)
+
 = 1.2.4 =
 * More examples
 
