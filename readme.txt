@@ -2,7 +2,7 @@
 Contributors: mpol
 Tags: twitter, widget, twitter style, twitter styling, stylesheet, embedded timeline, easy twitter widget
 Requires at least: 3.0
-Tested up to: 3.8
+Tested up to: 3.9.0
 Stable tag: trunk
 License: GPLv2 or later
 
@@ -56,6 +56,9 @@ You can, but it will probably not load any styling in the second widget.
 6. Screenshot of the frontend of the widget with blue styling
 
 == Changelog ==
+
+= 1.2.6 =
+* Support Widget Customizer in 3.9
 
 = 1.2.5 =
 * Only load js when widget is loaded (in footer)

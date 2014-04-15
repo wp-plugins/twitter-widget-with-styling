@@ -3,7 +3,7 @@
 Plugin Name: Twitter Widget with Styling
 Plugin URI: http://timelord.nl/
 Description: A Twitter widget that is easy to configure and easy to style.
-Version: 1.2.5
+Version: 1.2.6
 Author: Marcel Pol
 Author URI: http://timelord.nl
 Text Domain: twitter_style
@@ -32,7 +32,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 class TL_Twitter extends WP_Widget {
 
 	function __construct() {
-		$widget_ops = array('classname' => 'tl_twitter', 'description' => __('Twitter Widget with Styling','twitter_style') );
+		$widget_ops = array('classname' => 'tl_twitter', 'description' => __('Twitter Widget with Styling','twitter_style'), 'customizer_support' => true );
 		parent::__construct('tl_twitter', 'Twitter Widget', $widget_ops);
 		$this->alt_option_name = 'tl_twitter';
 
