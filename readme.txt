@@ -2,7 +2,7 @@
 Contributors: mpol
 Tags: twitter, widget, twitter style, twitter styling, stylesheet, embedded timeline, easy twitter widget
 Requires at least: 3.0
-Tested up to: 3.9.0
+Tested up to: 4.0
 Stable tag: trunk
 License: GPLv2 or later
 
