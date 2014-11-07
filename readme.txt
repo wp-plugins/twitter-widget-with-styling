@@ -42,11 +42,6 @@ Do not edit the style_twitter.css in the plugin itself, it will be overwritten w
 This is because the browser cache does not refresh.
 You can set "Development" on in the widget. It will make sure it refreshes the browser cache.
 
-= I use a Child theme, how to set it up then? =
-
-Currently Child Themes are not supported well. The plugin will look into the Parent Theme folder.
-I will look at this issue in a next release.
-
 = Can I add multiple widgets to a page? =
 
 You can, but it will probably not load any styling in the second widget.
