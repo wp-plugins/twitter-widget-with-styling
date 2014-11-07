@@ -3,7 +3,7 @@
 Plugin Name: Twitter Widget with Styling
 Plugin URI: http://products.zenoweb.nl/free-wordpress-plugins/twitter-widget-styling/
 Description: A Twitter widget that is easy to configure and easy to style.
-Version: 1.2.6
+Version: 1.2.7
 Author: Marcel Pol
 Author URI: http://zenoweb.nl
 Text Domain: twitter_style
@@ -32,7 +32,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 class TL_Twitter extends WP_Widget {
 
 	function __construct() {
-		$widget_ops = array('classname' => 'tl_twitter', 'description' => __('Twitter Widget with Styling','twitter_style'), 'customizer_support' => true );
+		$widget_ops = array( 'classname' => 'tl_twitter', 'description' => __('Twitter Widget with Styling','twitter_style') );
 		parent::__construct('tl_twitter', 'Twitter Widget', $widget_ops);
 		$this->alt_option_name = 'tl_twitter';
 
@@ -69,9 +69,9 @@ class TL_Twitter extends WP_Widget {
 
 
 		// find out if the template has a stylesheet, else use the one in the plugin
-		$css = TEMPLATEPATH . '/style_twitter.css';
-		if ( file_exists( $css ) ) {
-			$css = get_bloginfo( 'template_url' ) . '/style_twitter.css';
+		$cssfile = get_theme_root() . "/" . get_stylesheet() . '/style_twitter.css'; // local file, support childthemes
+		if ( file_exists( $cssfile ) ) {
+			$css = get_stylesheet_directory_uri() . '/style_twitter.css'; // URI file, support childthemes
 		} else {
 			$css = WP_PLUGIN_URL . '/' . plugin_basename(dirname(__FILE__)) . '/css/style_twitter.css';
 		}
@@ -102,7 +102,7 @@ class TL_Twitter extends WP_Widget {
 
 		<?php
 		// Registers Style with WordPress to wp_footer() so the browser-cache is updated
-		wp_register_script( 'tl_twitter', WP_PLUGIN_URL . '/' . plugin_basename(dirname(__FILE__)) . '/js/style_twitter.js','jquery','1.2.5', true );
+		wp_register_script( 'tl_twitter', WP_PLUGIN_URL . '/' . plugin_basename(dirname(__FILE__)) . '/js/style_twitter.js','jquery','1.2.7', true );
 		wp_enqueue_script('tl_twitter');
 
 		$cache[$args['widget_id']] = ob_get_flush();

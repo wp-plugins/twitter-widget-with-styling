@@ -62,6 +62,11 @@ You can, but it will probably not load any styling in the second widget.
 
 == Changelog ==
 
+= 1.2.7 =
+* 2014-11-07
+* Support Child Themes
+* Drop unneeded Widget Customizer support
+
 = 1.2.6 =
 * 2014-04-15
 * Support Widget Customizer in 3.9
