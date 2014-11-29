@@ -46,6 +46,11 @@ You can set "Development" on in the widget. It will make sure it refreshes the b
 
 You can, but it will probably not load any styling in the second widget.
 
+= Is WordPress MultiSite supported? =
+
+Not really. I heard there is funky behaviour with activating and deactivating the plugin.
+I will look at it soon.
+
 == Screenshots ==
 
 1. Screenshot of the widget in the admin section.
