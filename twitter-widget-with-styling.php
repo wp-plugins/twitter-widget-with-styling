@@ -10,7 +10,7 @@ Text Domain: twitter_style
 Domain Path: /lang/
 
 
-Copyright 2013 Marcel Pol (email: marcel@timelord.nl)
+Copyright 2013-2015  Marcel Pol  (email: marcel@timelord.nl)
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
