@@ -1,5 +1,7 @@
+
+	var checkTwitter = 0;
+
 	function styleTwitterWidget() {
-		var checkTwitter = 0;
 		var ifrm_elem = 0;
 		var ifrm_content = 0;
 		var ifrm = 0;

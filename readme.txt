@@ -62,6 +62,10 @@ I will look at it soon.
 
 == Changelog ==
 
+= 1.2.8 =
+* 2015-
+* Have checkTwitter var really be a counter.
+
 = 1.2.7 =
 * 2014-11-07
 * Support Child Themes
