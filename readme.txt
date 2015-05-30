@@ -3,7 +3,7 @@ Contributors: mpol
 Tags: twitter, widget, twitter style, twitter styling, stylesheet, embedded timeline, easy twitter widget
 Requires at least: 3.0
 Tested up to: 4.2
-Stable tag: 1.2.7
+Stable tag: 1.2.8
 License: GPLv2 or later
 
 
@@ -63,7 +63,7 @@ I will look at it soon.
 == Changelog ==
 
 = 1.2.8 =
-* 2015-
+* 2015-05-30
 * Have checkTwitter var really be a counter.
 
 = 1.2.7 =
