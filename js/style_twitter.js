@@ -1,5 +1,7 @@
+
+	var checkTwitter = 0;
+
 	function styleTwitterWidget() {
-		var checkTwitter = 0;
 		var ifrm_elem = 0;
 		var ifrm_content = 0;
 		var ifrm = 0;
@@ -16,8 +18,9 @@
 			name: "twitterCSS"
 		});
 
+		checkTwitter++;
+
 		if (jQuery('.twitter-timeline').length > 0) {
-			checkTwitter++;
 			if ( !document.getElementById('twitter-widget-0') ) {
 				// add an id if it doesn't exists already
 				jQuery('.twitter-timeline').prop('id', 'twitter-widget-0');
