@@ -29,6 +29,13 @@ You can have it load an extra stylesheet, where you can style the layout of the 
 6. Add your Twitter Name and your Twitter ID from the code you got from Twitter.
 7. Enjoy!
 
+= Todo list =
+
+There are some improvements that can be made:
+
+* Support only this plugin, not just blindly the first Twitter Widget.
+* Add the stylesheet to every widget, not just the first one.
+
 == Frequently Asked Questions ==
 
 = How do I edit the stylesheet? =
