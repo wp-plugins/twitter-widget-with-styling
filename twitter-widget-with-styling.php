@@ -33,7 +33,7 @@ class TL_Twitter extends WP_Widget {
 
 	function __construct() {
 		$widget_ops = array( 'classname' => 'tl_twitter', 'description' => __('Twitter Widget with Styling','twitter_style') );
-		parent::__construct('tl_twitter', 'Twitter Widget', $widget_ops);
+		parent::__construct('tl_twitter', __('Twitter', 'twitter_style'), $widget_ops);
 		$this->alt_option_name = 'tl_twitter';
 
 		add_action( 'save_post', array(&$this, 'flush_widget_cache') );
