@@ -1,7 +1,7 @@
 
 /*
  * Styling for Twitter Widget.
- * Brown Colorscheme.
+ * Grey Colorscheme.
  */
 
 
@@ -15,7 +15,7 @@ html .env-narrow .header .profile .p-name {
 
 body .timeline-header,
 body .timeline-footer {
-	background-color: #CD6715;
+	background-color: #8ba0aa;
 }
 body .timeline-header {
 	border-radius: 3px 3px 0 0;
@@ -41,7 +41,7 @@ html .thm-dark .timeline-header a.follow-button:visited,
 html .thm-dark .timeline-header a.follow-button:hover,
 html .thm-dark .timeline-header a.follow-button:focus,
 html .thm-dark .timeline-header a.follow-button:active {
-	color: #CD6715;
+	color: #555;
 }
 html .follow-button:link,
 html .follow-button:visited {
@@ -49,7 +49,7 @@ html .follow-button:visited {
 	background-image: linear-gradient(#fff, #ddd);
 	border: 1px solid #ccc;
 	border-radius: 2px;
-	color: #CD6715;
+	color: #555;
 	cursor: pointer;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 	white-space: nowrap;
@@ -68,19 +68,19 @@ body .timeline .timeline-header h2.byline a:visited {
 
 body .timeline,
 html .timeline .stream {
-	background-color: #CD6715;
+	background-color: #9fb9c5;
 	color: #fff;
 }
 
 body .timeline a:link,
 body .timeline a:visited {
-	color: #FD8725;
+	color: #555;
 	text-decoration: none;
 }
 
 body .timeline a:active,
 body .timeline a:hover {
-	color: #FD8725;
+	color: #555;
 	text-decoration: underline;
 }
 
