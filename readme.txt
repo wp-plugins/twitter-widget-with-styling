@@ -69,6 +69,10 @@ I will look at it soon.
 
 == Changelog ==
 
+= 1.2.9 =
+* 2015-
+* Really load translation.
+
 = 1.2.8 =
 * 2015-05-30
 * Have checkTwitter var really be a counter.

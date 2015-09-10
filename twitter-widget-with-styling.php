@@ -39,8 +39,6 @@ class TL_Twitter extends WP_Widget {
 		add_action( 'save_post', array(&$this, 'flush_widget_cache') );
 		add_action( 'deleted_post', array(&$this, 'flush_widget_cache') );
 		add_action( 'switch_theme', array(&$this, 'flush_widget_cache') );
-
-		load_plugin_textdomain('twitter_style', false, dirname( plugin_basename( __FILE__ ) ) . '/lang/');
 	}
 
 	function widget($args, $instance) {
@@ -163,6 +161,12 @@ class TL_Twitter extends WP_Widget {
 	}
 
 }
+
+
+function tl_twitter_lang() {
+	load_plugin_textdomain('twitter_style', false, dirname( plugin_basename( __FILE__ ) ) . '/lang/');
+}
+add_action('plugins_loaded', 'tl_twitter_lang');
 
 
 function tl_twitter() {
