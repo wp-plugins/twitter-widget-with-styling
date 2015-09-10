@@ -72,6 +72,7 @@ I will look at it soon.
 = 1.3.0 =
 * 2015-
 * Only support WordPress 3.7+, since they really are supported.
+* Add License to JavaScript.
 
 = 1.2.9 =
 * 2015-09-10

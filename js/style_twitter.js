@@ -1,4 +1,12 @@
 
+/*!
+ * Twitter widget with Styling
+ * https://zenoweb.nl
+ * Copyright 2013 - 2015 Marcel Pol, ZenoWeb
+ * Licensed MIT
+ */
+
+
 	var checkTwitter = 0;
 
 	function styleTwitterWidget() {
