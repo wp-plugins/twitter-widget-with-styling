@@ -1,13 +1,13 @@
 === Twitter Widget with Styling ===
 Contributors: mpol
 Tags: twitter, widget, twitter style, twitter styling, stylesheet, embedded timeline, easy twitter widget
-Requires at least: 3.0
+Requires at least: 3.7
 Tested up to: 4.3
 Stable tag: 1.2.9
 License: GPLv2 or later
 
 
-A Twitter widget that is easy to configure and easy to style.
+A Twitter Widget that is easy to configure and easy to style.
 
 == Description ==
 
@@ -68,6 +68,10 @@ I will look at it soon.
 6. Screenshot of the frontend of the widget with blue styling
 
 == Changelog ==
+
+= 1.3.0 =
+* 2015-
+* Only support WordPress 3.7+, since they really are supported.
 
 = 1.2.9 =
 * 2015-09-10
