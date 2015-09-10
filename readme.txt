@@ -71,6 +71,7 @@ I will look at it soon.
 
 = 1.2.9 =
 * 2015-
+* Change text-domain to slug.
 * Really load translation.
 
 = 1.2.8 =

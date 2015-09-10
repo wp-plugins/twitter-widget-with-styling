@@ -2,11 +2,11 @@
 /*
 Plugin Name: Twitter Widget with Styling
 Plugin URI: http://products.zenoweb.nl/free-wordpress-plugins/twitter-widget-styling/
-Description: A Twitter widget that is easy to configure and easy to style.
+Description: A Twitter Widget that is easy to configure and easy to style.
 Version: 1.2.8
 Author: Marcel Pol
 Author URI: http://zenoweb.nl
-Text Domain: twitter_style
+Text Domain: twitter-widget-with-styling
 Domain Path: /lang/
 
 
@@ -32,8 +32,8 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 class TL_Twitter extends WP_Widget {
 
 	function __construct() {
-		$widget_ops = array( 'classname' => 'tl_twitter', 'description' => __('Twitter Widget with Styling','twitter_style') );
-		parent::__construct('tl_twitter', __('Twitter', 'twitter_style'), $widget_ops);
+		$widget_ops = array( 'classname' => 'tl_twitter', 'description' => __('Twitter Widget with Styling.','twitter-widget-with-styling') );
+		parent::__construct('tl_twitter', __('Twitter', 'twitter-widget-with-styling'), $widget_ops);
 		$this->alt_option_name = 'tl_twitter';
 
 		add_action( 'save_post', array(&$this, 'flush_widget_cache') );
@@ -87,7 +87,7 @@ class TL_Twitter extends WP_Widget {
 			height="<?php echo $height; ?>"
 			data-theme="light"
 			href="https://twitter.com/<?php echo $name; ?>"
-			data-widget-id="<?php echo $id; ?>">Tweets van @<?php echo $name; ?>
+			data-widget-id="<?php echo $id; ?>"><?php __('Tweets of', 'twitter-widget-with-styling'); ?> @<?php echo $name; ?>
 		</a>
 		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
@@ -132,39 +132,39 @@ class TL_Twitter extends WP_Widget {
     	/*
     	 * Set Default Value for widget form
     	 */
-    	$default_value	=	array("title"=> "Twitter", "name" => "MarcelPolleke", "id" => "399217180551544832", "height" => 400, "border" => "#f4f4f4", "devel" => 0 );
-    	$instance		=	wp_parse_args( (array) $instance, $default_value );
+    	$default_value = array("title"=> "Twitter", "name" => "MarcelPolleke", "id" => "399217180551544832", "height" => 400, "border" => "#f4f4f4", "devel" => 0 );
+    	$instance      = wp_parse_args( (array) $instance, $default_value );
 
 		$title = isset($instance['title']) ? esc_attr($instance['title']) : ''; ?>
-		<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title', 'twitter_style'); ?></label>
+		<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title', 'twitter-widget-with-styling'); ?></label>
 		<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" /></p><?php
 
 		$name = isset($instance['name']) ? esc_attr($instance['name']) : ''; ?>
-		<p><label for="<?php echo $this->get_field_id('name'); ?>"><?php _e('Twitter Name', 'twitter_style'); ?></label>
+		<p><label for="<?php echo $this->get_field_id('name'); ?>"><?php _e('Twitter Name', 'twitter-widget-with-styling'); ?></label>
 		<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('name'); ?>" type="text" value="<?php echo $name; ?>" /></p><?php
 
 		$id = isset($instance['id']) ? esc_attr($instance['id']) : ''; ?>
-		<p><label for="<?php echo $this->get_field_id('id'); ?>"><?php _e('Twitter ID', 'twitter_style'); ?></label>
+		<p><label for="<?php echo $this->get_field_id('id'); ?>"><?php _e('Twitter ID', 'twitter-widget-with-styling'); ?></label>
 		<input class="widefat" id="<?php echo $this->get_field_id('id'); ?>" name="<?php echo $this->get_field_name('id'); ?>" type="text" value="<?php echo $id; ?>" /></p><?php
 
 		$height = isset($instance['height']) ? esc_attr($instance['height']) : ''; ?>
-		<p><label for="<?php echo $this->get_field_id('height'); ?>"><?php _e('Height', 'twitter_style'); ?></label>
+		<p><label for="<?php echo $this->get_field_id('height'); ?>"><?php _e('Height', 'twitter-widget-with-styling'); ?></label>
 		<input class="widefat" id="<?php echo $this->get_field_id('height'); ?>" name="<?php echo $this->get_field_name('height'); ?>" type="text" value="<?php echo $height; ?>" /></p><?php
 
 		$border = isset($instance['border']) ? esc_attr($instance['border']) : ''; ?>
-		<p><label for="<?php echo $this->get_field_id('border'); ?>"><?php _e('Border Color', 'twitter_style'); ?></label>
+		<p><label for="<?php echo $this->get_field_id('border'); ?>"><?php _e('Border Color', 'twitter-widget-with-styling'); ?></label>
 		<input class="widefat" id="<?php echo $this->get_field_id('border'); ?>" name="<?php echo $this->get_field_name('border'); ?>" type="text" value="<?php echo $border; ?>" /></p><?php
 
 		$devel = esc_attr( $instance['devel'] ); ?>
 		<input type="checkbox" class="checkbox" id="<?php echo $this->get_field_id('devel'); ?>" name="<?php echo $this->get_field_name('devel'); ?>"<?php checked( $devel ); ?> />
-		<label for="<?php echo $this->get_field_id('devel'); ?>"><?php _e( 'Development','twitter_style' ); ?></label><br /><?php
+		<label for="<?php echo $this->get_field_id('devel'); ?>"><?php _e( 'Development','twitter-widget-with-styling' ); ?></label><br /><?php
 	}
 
 }
 
 
 function tl_twitter_lang() {
-	load_plugin_textdomain('twitter_style', false, dirname( plugin_basename( __FILE__ ) ) . '/lang/');
+	load_plugin_textdomain('twitter-widget-with-styling', false, dirname( plugin_basename( __FILE__ ) ) . '/lang/');
 }
 add_action('plugins_loaded', 'tl_twitter_lang');
 
