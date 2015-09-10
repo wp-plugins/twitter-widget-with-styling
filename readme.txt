@@ -3,7 +3,7 @@ Contributors: mpol
 Tags: twitter, widget, twitter style, twitter styling, stylesheet, embedded timeline, easy twitter widget
 Requires at least: 3.0
 Tested up to: 4.3
-Stable tag: 1.2.8
+Stable tag: 1.2.9
 License: GPLv2 or later
 
 
@@ -70,7 +70,8 @@ I will look at it soon.
 == Changelog ==
 
 = 1.2.9 =
-* 2015-
+* 2015-09-10
+* Update examples.
 * Change text-domain to slug.
 * Really load translation.
 

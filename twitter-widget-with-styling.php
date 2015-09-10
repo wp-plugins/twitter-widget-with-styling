@@ -3,7 +3,7 @@
 Plugin Name: Twitter Widget with Styling
 Plugin URI: http://products.zenoweb.nl/free-wordpress-plugins/twitter-widget-styling/
 Description: A Twitter Widget that is easy to configure and easy to style.
-Version: 1.2.8
+Version: 1.2.9
 Author: Marcel Pol
 Author URI: http://zenoweb.nl
 Text Domain: twitter-widget-with-styling
@@ -100,7 +100,7 @@ class TL_Twitter extends WP_Widget {
 
 		<?php
 		// Registers Style with WordPress to wp_footer() so the browser-cache is updated
-		wp_register_script( 'tl_twitter', WP_PLUGIN_URL . '/' . plugin_basename(dirname(__FILE__)) . '/js/style_twitter.js','jquery','1.2.7', true );
+		wp_register_script( 'tl_twitter', WP_PLUGIN_URL . '/' . plugin_basename(dirname(__FILE__)) . '/js/style_twitter.js','jquery','1.2.9', true );
 		wp_enqueue_script('tl_twitter');
 
 		$cache[$args['widget_id']] = ob_get_flush();
