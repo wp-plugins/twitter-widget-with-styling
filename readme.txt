@@ -11,7 +11,7 @@ A Twitter Widget that is easy to configure and easy to style.
 
 == Description ==
 
-A Twitter widget that is easy to configure and easy to style. It uses the Embedded Timeline widget of Twitter.com.
+A Twitter Widget that is easy to configure and easy to style. It uses the Embedded Timeline Widget of Twitter.com.
 You can have it load an extra stylesheet, where you can style the layout of the widget.
 
 = Languages =
