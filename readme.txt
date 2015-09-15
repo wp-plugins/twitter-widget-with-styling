@@ -1,17 +1,17 @@
 === Twitter Widget with Styling ===
 Contributors: mpol
 Tags: twitter, widget, twitter style, twitter styling, stylesheet, embedded timeline, easy twitter widget
-Requires at least: 3.0
-Tested up to: 4.0
-Stable tag: trunk
+Requires at least: 3.7
+Tested up to: 4.3
+Stable tag: 1.3.0
 License: GPLv2 or later
 
 
-A Twitter widget that is easy to configure and easy to style.
+A Twitter Widget that is easy to configure and easy to style.
 
 == Description ==
 
-A Twitter widget that is easy to configure and easy to style. It uses the Embedded Timeline widget of Twitter.com.
+A Twitter Widget that is easy to configure and easy to style. It uses the Embedded Timeline Widget of Twitter.com.
 You can have it load an extra stylesheet, where you can style the layout of the widget.
 
 = Languages =
@@ -57,30 +57,59 @@ You can, but it will probably not load any styling in the second widget.
 
 == Changelog ==
 
+= 1.3.0 =
+* 2015-09-15
+* Only support WordPress 3.7+, since they really are supported.
+* Add License to JavaScript.
+
+= 1.2.9 =
+* 2015-09-10
+* Update examples.
+* Change text-domain to slug.
+* Really load translation.
+
+= 1.2.8 =
+* 2015-05-30
+* Have checkTwitter var really be a counter.
+
+= 1.2.7 =
+* 2014-11-07
+* Support Child Themes
+* Drop unneeded Widget Customizer support
+
 = 1.2.6 =
+* 2014-04-15
 * Support Widget Customizer in 3.9
 
 = 1.2.5 =
+* 2014-04-11
 * Only load js when widget is loaded (in footer)
 
 = 1.2.4 =
+* 2014-04-02
 * More examples
 
 = 1.2.3 =
+* 2014-04-02
 * Examples now included
 
 = 1.2.2 =
+* 2014-02-18
 * Fix issue with Contact Form 7
 
 = 1.2.1 =
+* 2013-12-10
 * Change name of var to not conflict
 
 = 1.2 =
+* 2013-11-22
 * Add Serbo-Croatian language (thanks Borisa)
 * Add development mode
 
 = 1.1 =
+* 2013-11-13
 * First fix issue of loading on every page
 
 = 1.0 =
+* 2013-11-12
 * First Version
