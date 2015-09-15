@@ -3,7 +3,7 @@ Contributors: mpol
 Tags: twitter, widget, twitter style, twitter styling, stylesheet, embedded timeline, easy twitter widget
 Requires at least: 3.7
 Tested up to: 4.3
-Stable tag: 1.2.9
+Stable tag: 1.3.0
 License: GPLv2 or later
 
 
@@ -28,13 +28,6 @@ You can have it load an extra stylesheet, where you can style the layout of the 
 5. Go to Appearance->Widgets, add the widget to any sidebar.
 6. Add your Twitter Name and your Twitter ID from the code you got from Twitter.
 7. Enjoy!
-
-= Todo list =
-
-There are some improvements that can be made:
-
-* Support only this plugin, not just blindly the first Twitter Widget.
-* Add the stylesheet to every widget, not just the first one.
 
 == Frequently Asked Questions ==
 
@@ -65,7 +58,7 @@ You can, but it will probably not load any styling in the second widget.
 == Changelog ==
 
 = 1.3.0 =
-* 2015-
+* 2015-09-15
 * Only support WordPress 3.7+, since they really are supported.
 * Add License to JavaScript.
 

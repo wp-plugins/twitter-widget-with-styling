@@ -3,7 +3,7 @@
 Plugin Name: Twitter Widget with Styling
 Plugin URI: http://products.zenoweb.nl/free-wordpress-plugins/twitter-widget-styling/
 Description: A Twitter Widget that is easy to configure and easy to style.
-Version: 1.2.9
+Version: 1.3.0
 Author: Marcel Pol
 Author URI: http://zenoweb.nl
 Text Domain: twitter-widget-with-styling
@@ -27,6 +27,12 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
+
+/* Todo List:
+ *
+ * Support only this plugin, not just the first Twitter Widget.
+ * Add the stylesheet to every widget, not just the first one.
+ */
 
 
 class TL_Twitter extends WP_Widget {
