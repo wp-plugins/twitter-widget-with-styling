@@ -1,0 +1,111 @@
+/*
+ * Styling for Twitter Widget.
+ * Another Blue Color Scheme.
+ */
+
+
+html,
+html .SandboxRoot {
+	color: #003463;
+}
+
+html body {
+	font-family: 'Open Sans', Arial, Verdana, sans-serif;
+	color: #2d2c2e;
+}
+
+html body .p-author .profile .p-name,
+html body .custom-timeline-owner-profile .p-name,
+html body .env-narrow .header .profile .p-name,
+html body .p-name.customisable-highlight {
+	color: #072b4d;
+}
+
+body .timeline-header,
+body .timeline-footer {
+	background-color: #003463;
+	background-image: -moz-linear-gradient(top, #355483, #003463);
+	background-image: -ms-linear-gradient(top, #355483, #003463);
+	background-image: -webkit-linear-gradient(top, #355483, #003463);
+	background-image: -o-linear-gradient(top, #355483, #003463);
+	background-image: linear-gradient(top, #355483, #003463);
+}
+
+body .timeline-header {
+	border-radius: 3px 3px 0 0;
+}
+body .timeline-footer {
+	border-radius: 0 0 3px 3px;
+}
+html .timeline-header .summary,
+html .timeline-header .summary a:link,
+html .timeline-header .summary a:visited,
+html .p-author a.profile:hover {
+	color: #FFFFEE;
+}
+
+/* Follow Button */
+html .timeline-header a.follow-button:link,
+html .timeline-header a.follow-button:visited,
+html .timeline-header a.follow-button:hover,
+html .timeline-header a.follow-button:focus,
+html .timeline-header a.follow-button:active,
+html .thm-dark .timeline-header a.follow-button:link,
+html .thm-dark .timeline-header a.follow-button:visited,
+html .thm-dark .timeline-header a.follow-button:hover,
+html .thm-dark .timeline-header a.follow-button:focus,
+html .thm-dark .timeline-header a.follow-button:active {
+	color: #003463;
+}
+html .follow-button:link,
+html .follow-button:visited {
+	background-color: #FFFFEE;
+	background-image: linear-gradient(#FFFFEE, #FFFFDD);
+	border: 1px solid #eeeedd;
+	border-radius: 2px;
+	color: #016295;
+	cursor: pointer;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	white-space: nowrap;
+}
+
+h2.byline {
+	display: none;
+	color: #FFFFEE;
+}
+body .timeline .timeline-header h2.byline a:link,
+body .timeline .timeline-header h2.byline a:hover,
+body .timeline .timeline-header h2.byline a:active,
+body .timeline .timeline-header h2.byline a:visited {
+	color: #FFFFEE;
+}
+
+body .timeline {
+	background-color: #FFFFEE;
+	background-repeat: repeat-x;
+	background-image: -moz-linear-gradient(top, #FFFFEE, #eeeedd);
+	background-image: -ms-linear-gradient(top, #FFFFEE, #eeeedd);
+	background-image: -webkit-linear-gradient(top, #FFFFEE, #eeeedd);
+	background-image: -o-linear-gradient(top, #FFFFEE, #eeeedd);
+	background-image: linear-gradient(top, #FFFFEE, #eeeedd);
+	border-color: #f9f9f6;
+}
+
+
+body .timeline a:link,
+body .timeline a:visited {
+	color: #072b4d;
+	text-decoration: none;
+}
+
+body .timeline a:active,
+body .timeline a:hover {
+	color: #072b4d;
+	text-decoration: underline;
+}
+
+/* Orange dotted border for each tweet */
+html body li.customisable-border {
+	border-color: #072b4d;
+	border-style: dotted;
+}

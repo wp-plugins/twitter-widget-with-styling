@@ -3,7 +3,7 @@
 Plugin Name: Twitter Widget with Styling
 Plugin URI: http://products.zenoweb.nl/free-wordpress-plugins/twitter-widget-styling/
 Description: A Twitter Widget that is easy to configure and easy to style.
-Version: 1.3.0
+Version: 1.3.1
 Author: Marcel Pol
 Author URI: http://zenoweb.nl
 Text Domain: twitter-widget-with-styling
@@ -77,10 +77,10 @@ class TL_Twitter extends WP_Widget {
 		if ( file_exists( $cssfile ) ) {
 			$css = get_stylesheet_directory_uri() . '/style_twitter.css'; // URI file, support childthemes
 		} else {
-			$css = WP_PLUGIN_URL . '/' . plugin_basename(dirname(__FILE__)) . '/css/style_twitter.css';
+			$css = plugins_url( '/css/style_twitter.css', __FILE__ );
 		}
 		if ( $devel ) {
-			$rand = "?ver=" . mt_rand(0, 100);
+			$rand = "?ver=" . mt_rand(0, 1000);
 		} else {
 			$rand = "";
 		}
@@ -95,19 +95,17 @@ class TL_Twitter extends WP_Widget {
 			href="https://twitter.com/<?php echo $name; ?>"
 			data-widget-id="<?php echo $id; ?>"><?php __('Tweets of', 'twitter-widget-with-styling'); ?> @<?php echo $name; ?>
 		</a>
-		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-		<script>
-			/* Twitter Widget with Styling */
-			var twitter_style_css = '<?php echo $css . $rand; ?>';
-		</script>
 
 		<?php echo $after_widget; ?>
 
 		<?php
 		// Registers Style with WordPress to wp_footer() so the browser-cache is updated
-		wp_register_script( 'tl_twitter', WP_PLUGIN_URL . '/' . plugin_basename(dirname(__FILE__)) . '/js/style_twitter.js','jquery','1.2.9', true );
+		wp_register_script( 'tl_twitter', plugins_url( '/js/style_twitter.js', __FILE__ ),'jquery','1.3.1', true );
 		wp_enqueue_script('tl_twitter');
+		$dataToBePassed = array(
+			'twitter_style_css' => $css . $rand
+		);
+		wp_localize_script( 'tl_twitter', 'tl_twitter_localize', $dataToBePassed );
 
 		$cache[$args['widget_id']] = ob_get_flush();
 		wp_cache_set('tl_twitter', $cache, 'widget');
