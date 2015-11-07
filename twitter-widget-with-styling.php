@@ -30,8 +30,8 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 /* Todo List:
  *
- * Support only this plugin, not just the first Twitter Widget.
- * Add the stylesheet to every widget, not just the first one.
+ * - Add the stylesheet to every widget, not just the first one.
+ *
  */
 
 
