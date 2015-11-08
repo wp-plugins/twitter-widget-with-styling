@@ -50,11 +50,13 @@ class TL_Twitter extends WP_Widget {
 	function widget($args, $instance) {
 		$cache = wp_cache_get('tl_twitter', 'widget');
 
-		if ( !is_array($cache) )
+		if ( !is_array($cache) ) {
 			$cache = array();
+		}
 
-		if ( ! isset( $args['widget_id'] ) )
+		if ( ! isset( $args['widget_id'] ) ) {
 			$args['widget_id'] = $this->id;
+		}
 
 		if ( isset( $cache[ $args['widget_id'] ] ) ) {
 			echo $cache[ $args['widget_id'] ];
@@ -64,12 +66,12 @@ class TL_Twitter extends WP_Widget {
 		ob_start();
 		extract($args);
 
-		$title	= apply_filters('widget_title', empty($instance['title']) ? 'Twitter' : $instance['title'], $instance, $this->id_base);
-		$name	= $instance['name'];
-		$id		= $instance['id'];
-		$height	= $instance['height'];
-		$border	= $instance['border'];
-		$devel	= ! empty( $instance['devel'] ) ? '1' : '0';
+		$title  = apply_filters('widget_title', empty($instance['title']) ? 'Twitter' : $instance['title'], $instance, $this->id_base);
+		$name   = $instance['name'];
+		$id     = $instance['id'];
+		$height = $instance['height'];
+		$border = $instance['border'];
+		$devel  = ! empty( $instance['devel'] ) ? '1' : '0';
 
 
 		// find out if the template has a stylesheet, else use the one in the plugin
@@ -86,7 +88,7 @@ class TL_Twitter extends WP_Widget {
 		}
 
 		echo $before_widget;
-		if ( $title ) echo $before_title . $title . $after_title; ?>
+		if ( $title ) { echo $before_title . $title . $after_title; } ?>
 
 		<a class="twitter-timeline"
 			data-border-color="<?php echo $border; ?>"
@@ -99,7 +101,7 @@ class TL_Twitter extends WP_Widget {
 		<?php echo $after_widget; ?>
 
 		<?php
-		// Registers Style with WordPress to wp_footer() so the browser-cache is updated
+		// Registers Style with WordPress to wp_footer().
 		wp_register_script( 'tl_twitter', plugins_url( '/js/style_twitter.js', __FILE__ ),'jquery','1.3.1', true );
 		wp_enqueue_script('tl_twitter');
 		$dataToBePassed = array(
@@ -113,18 +115,18 @@ class TL_Twitter extends WP_Widget {
 
 	function update( $new_instance, $old_instance ) {
 		$instance = $old_instance;
-		$instance['title']	= strip_tags($new_instance['title']);
-		$instance['name']	= strip_tags($new_instance['name']);
-		$instance['id']		= strip_tags($new_instance['id']);
+		$instance['title']  = strip_tags($new_instance['title']);
+		$instance['name']   = strip_tags($new_instance['name']);
+		$instance['id']     = strip_tags($new_instance['id']);
 		$instance['height'] = strip_tags($new_instance['height']);
 		$instance['border'] = strip_tags($new_instance['border']);
-		$instance['devel']	= ! empty( $new_instance['devel'] ) ? 1 : 0;
+		$instance['devel']  = ! empty( $new_instance['devel'] ) ? 1 : 0;
 		$this->flush_widget_cache();
 
 		$alloptions = wp_cache_get( 'alloptions', 'options' );
-		if ( isset($alloptions['tl_twitter']) )
+		if ( isset($alloptions['tl_twitter']) ) {
 			delete_option('tl_twitter');
-
+		}
 		return $instance;
 	}
 
