@@ -103,7 +103,7 @@ class TL_Twitter extends WP_Widget {
 		wp_register_script( 'tl_twitter', plugins_url( '/js/style_twitter.js', __FILE__ ),'jquery','1.3.1', true );
 		wp_enqueue_script('tl_twitter');
 		$dataToBePassed = array(
-			'twitter_style_css' => $css . $rand
+			'style_twitter_css' => $css . $rand
 		);
 		wp_localize_script( 'tl_twitter', 'tl_twitter_localize', $dataToBePassed );
 

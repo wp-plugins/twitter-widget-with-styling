@@ -26,7 +26,7 @@ function styleTwitterWidget() {
 	var ifrm_elem = 0;
 	var ifrm_content = 0;
 	var ifrm = 0;
-	var cssUrl = tl_twitter_localize.twitter_style_css;
+	var cssUrl = tl_twitter_localize.style_twitter_css; // Location of the style_twitter.css in the docroot.
 
 	var cssLink = jQuery("<link/>", {
 		href: cssUrl,
