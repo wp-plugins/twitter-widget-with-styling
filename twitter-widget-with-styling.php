@@ -3,7 +3,7 @@
 Plugin Name: Twitter Widget with Styling
 Plugin URI: http://products.zenoweb.nl/free-wordpress-plugins/twitter-widget-styling/
 Description: A Twitter Widget that is easy to configure and easy to style.
-Version: 1.3.1
+Version: 2.0.0
 Author: Marcel Pol
 Author URI: http://zenoweb.nl
 Text Domain: twitter-widget-with-styling
@@ -28,11 +28,8 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
 
-/* Todo List:
- *
- * - Add the stylesheet to every widget, not just the first one.
- *
- */
+// Plugin Version
+define('TL_TWITTER_STYLE_VER', '2.0.0');
 
 
 class TL_Twitter extends WP_Widget {
@@ -82,7 +79,7 @@ class TL_Twitter extends WP_Widget {
 			$css = plugins_url( '/css/style_twitter.css', __FILE__ );
 		}
 		if ( $devel ) {
-			$rand = "?ver=" . mt_rand(0, 1000);
+			$rand = "?ver=" . mt_rand( 0, 10000 );
 		} else {
 			$rand = "";
 		}
@@ -95,15 +92,16 @@ class TL_Twitter extends WP_Widget {
 			height="<?php echo $height; ?>"
 			data-theme="light"
 			href="https://twitter.com/<?php echo $name; ?>"
-			data-widget-id="<?php echo $id; ?>"><?php __('Tweets of', 'twitter-widget-with-styling'); ?> @<?php echo $name; ?>
+			data-widget-id="<?php echo $id; ?>">
+			<?php __('Tweets of', 'twitter-widget-with-styling'); ?> @<?php echo $name; ?>
 		</a>
 
 		<?php echo $after_widget; ?>
 
 		<?php
 		// Registers Style with WordPress to wp_footer().
-		wp_register_script( 'tl_twitter', plugins_url( '/js/style_twitter.js', __FILE__ ),'jquery','1.3.1', true );
-		wp_enqueue_script('tl_twitter');
+		wp_register_script( 'tl_twitter', plugins_url( '/js/style_twitter.js', __FILE__ ), 'jquery', TL_TWITTER_STYLE_VER, true );
+		wp_enqueue_script( 'tl_twitter' );
 		$dataToBePassed = array(
 			'style_twitter_css' => $css . $rand
 		);

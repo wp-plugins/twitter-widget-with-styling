@@ -2,7 +2,7 @@
 Contributors: mpol
 Tags: twitter, widget, twitter style, twitter styling, stylesheet, embedded timeline, easy twitter widget
 Requires at least: 3.7
-Tested up to: 4.3
+Tested up to: 4.4
 Stable tag: 1.3.1
 License: GPLv2 or later
 
@@ -57,8 +57,10 @@ You can, but it will probably not load any styling in the second widget.
 
 == Changelog ==
 
-= 1.3.2 =
-* 2015-
+= 2.0.0 =
+* 2015-11-10
+* Support Multiple Widgets.
+* Version 2.0.0 of JavaScript.
 * Use wp_localize_script for variable.
 * Place Twitter Timeline code in JavaScript file.
 * Moar examples.
