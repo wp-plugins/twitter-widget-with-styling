@@ -1,22 +1,33 @@
 
 /*
  * Styling for Twitter Widget.
- * Brown Colorscheme.
+ * Blue Orange Color Scheme.
  */
 
 
 html,
-html .SandboxRoot,
-html .p-author .profile .p-name,
-html .custom-timeline-owner-profile .p-name,
-html .env-narrow .header .profile .p-name {
-	color: #016295;
+html .SandboxRoot {
+	color: #003463;
+}
+
+/* Orange */
+html body .p-author .profile .p-name,
+html body .custom-timeline-owner-profile .p-name,
+html body .env-narrow .header .profile .p-name,
+html body .p-name.customisable-highlight {
+	color: #d3240c;
 }
 
 body .timeline-header,
 body .timeline-footer {
-	background-color: #CD6715;
+	background-color: #003463;
+	background-image: -moz-linear-gradient(top, #355483, #003463);
+	background-image: -ms-linear-gradient(top, #355483, #003463);
+	background-image: -webkit-linear-gradient(top, #355483, #003463);
+	background-image: -o-linear-gradient(top, #355483, #003463);
+	background-image: linear-gradient(top, #355483, #003463);
 }
+
 body .timeline-header {
 	border-radius: 3px 3px 0 0;
 }
@@ -27,7 +38,7 @@ html .timeline-header .summary,
 html .timeline-header .summary a:link,
 html .timeline-header .summary a:visited,
 html .p-author a.profile:hover {
-	color: #fff;
+	color: #FFFFEE;
 }
 
 /* Follow Button */
@@ -41,15 +52,15 @@ html .thm-dark .timeline-header a.follow-button:visited,
 html .thm-dark .timeline-header a.follow-button:hover,
 html .thm-dark .timeline-header a.follow-button:focus,
 html .thm-dark .timeline-header a.follow-button:active {
-	color: #CD6715;
+	color: #003463;
 }
 html .follow-button:link,
 html .follow-button:visited {
-	background-color: #fff;
-	background-image: linear-gradient(#fff, #ddd);
-	border: 1px solid #ccc;
+	background-color: #FFFFEE;
+	background-image: linear-gradient(#FFFFEE, #FFFFDD);
+	border: 1px solid #eeeedd;
 	border-radius: 2px;
-	color: #CD6715;
+	color: #016295;
 	cursor: pointer;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 	white-space: nowrap;
@@ -57,7 +68,7 @@ html .follow-button:visited {
 
 h2.byline {
 	display: none;
-	color: #fff;
+	color: #FFFFEE;
 }
 body .timeline .timeline-header h2.byline a:link,
 body .timeline .timeline-header h2.byline a:hover,
@@ -66,42 +77,25 @@ body .timeline .timeline-header h2.byline a:visited {
 	color: #FFFFEE;
 }
 
-body .timeline,
-html .timeline .stream {
-	background-color: #CD6715;
-	color: #fff;
+body .timeline {
+	background-color: #FFFFEE;
 }
+
 
 body .timeline a:link,
 body .timeline a:visited {
-	color: #FD8725;
+	color: #016295;
 	text-decoration: none;
 }
 
 body .timeline a:active,
 body .timeline a:hover {
-	color: #FD8725;
+	color: #478a57;
 	text-decoration: underline;
 }
 
-.timeline .p-author .profile .p-name,
-html .timeline .stream a:link,
-html .timeline .stream a:visited,
-html .timeline .stream a:hover,
-html .timeline .stream a:active {
-	color: #fff;
-}
-html,
-html .p-author .profile .p-name,
-html .cards-base p,
-html .cards-base p a,
-html .timeline-header .summary,
-html .timeline-header .summary a:link,
-html .timeline-header .summary a:visited,
-html .p-author a.profile:hover
-html .p-name, .p-author a.profile:focus .p-name {
-	color: #fff;
-}
-html .timeline .customisable-border {
+/* Orange dotted border for each tweet */
+html body li.customisable-border {
+	border-color: #d3240c;
 	border-style: dotted;
 }

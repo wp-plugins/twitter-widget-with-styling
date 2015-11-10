@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-27 20:21+0100\n"
+"POT-Creation-Date: 2015-09-10 10:16+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,26 +21,30 @@ msgstr ""
 msgid "Twitter Widget with Styling"
 msgstr ""
 
-#: twitter-widget-with-styling.php:139
+#: twitter-widget-with-styling.php:36
+msgid "Twitter"
+msgstr ""
+
+#: twitter-widget-with-styling.php:141
 msgid "Title"
 msgstr ""
 
-#: twitter-widget-with-styling.php:143
+#: twitter-widget-with-styling.php:145
 msgid "Twitter Name"
 msgstr ""
 
-#: twitter-widget-with-styling.php:147
+#: twitter-widget-with-styling.php:149
 msgid "Twitter ID"
 msgstr ""
 
-#: twitter-widget-with-styling.php:151
+#: twitter-widget-with-styling.php:153
 msgid "Height"
 msgstr ""
 
-#: twitter-widget-with-styling.php:155
+#: twitter-widget-with-styling.php:157
 msgid "Border Color"
 msgstr ""
 
-#: twitter-widget-with-styling.php:160
+#: twitter-widget-with-styling.php:162
 msgid "Development"
 msgstr ""
