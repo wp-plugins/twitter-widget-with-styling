@@ -53,24 +53,20 @@ function styleTwitterWidget_v2( widget, counter ) {
 	});
 
 	if ( jQuery( '#twitter-widget-' + widget ).length > 0 ) {
-		var ifrm_elem = jQuery( '#twitter-widget-' + widget );
 		var ifrm_content = document.getElementById( 'twitter-widget-' + widget ).contentWindow;
 
 		if ( typeof ifrm_content == 'object' ) {
 			// console.log( widget + ' We have content...' );
 			if ( typeof ifrm_content.document == 'object' ) {
 				var ifrm_doc = ifrm_content.document;
-
-				var jquery_head = jQuery( '#twitter-widget-' + widget ).contents().find( 'head' );
 				var stylesheet = ifrm_doc.styleSheets;
 				// console.log( widget + ' typeof: ' + typeof stylesheet );
 
+				// Check if it was already added, and do nothing from then on...
 				if ( typeof stylesheet == 'object' ) {
 					for ( var i = 0, max = stylesheet.length; i < max; i++ ) {
 						if ( stylesheet[i].href == cssUrl ) {
 							// console.log( widget + ' We have the stylesheet: ' + stylesheet[i].href );
-
-							// It was already added, do nothing from now on...
 							counter = 16;
 							// console.log( widget + ' Returning on a counter of: ' + counter );
 							return;
@@ -79,6 +75,7 @@ function styleTwitterWidget_v2( widget, counter ) {
 				}
 
 				// Add the stylesheet to this iframe
+				var jquery_head = jQuery( '#twitter-widget-' + widget ).contents().find( 'head' );
 				jquery_head.append( cssLink );
 			}
 		}
